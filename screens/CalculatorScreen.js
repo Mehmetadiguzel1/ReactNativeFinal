@@ -111,7 +111,8 @@ export default function CalculatorScreen() {
         <View style={styles.buttons}>
             {buttons.map((btn) =>
             btn === '=' || btn === '/' || btn === '*' || btn === '-' || btn === '+' ?
-                <TouchableOpacity key={btn} style={[styles.button, { backgroundColor: '#FF6666' }]} onPress={() => handleInput(btn)}>
+                // /, *, -, +, = button
+                <TouchableOpacity key={btn} style={[styles.button, { backgroundColor: '#FF3D00' }]} onPress={() => handleInput(btn)}>
                 <Text style={[styles.textButton, { color: 'white', fontSize: 28 }]}>{btn}</Text>
                 </TouchableOpacity>
                 : btn === 0 ?
@@ -122,19 +123,22 @@ export default function CalculatorScreen() {
                     <Text style={styles.textButton}>{btn}</Text>
                 </TouchableOpacity>
                 : btn === '.' || btn === 'DEL' ?
+                    // Del button
                     <TouchableOpacity key={btn} style={[styles.button, { backgroundColor: btn === '.' ? darkMode ? '#303946' : '#fff' : darkMode === true ? '#414853' : '#ededed', minWidth: '37%' }]}
                     onPress={() => handleInput(btn)}
                     >
                     <Text style={styles.textButton}>{btn}</Text>
                     </TouchableOpacity>
                     : btn === 'C' ?
+                    // C button
                     <TouchableOpacity key={btn} style={[styles.button, { backgroundColor: typeof (btn) === 'number' ? darkMode ? '#303946' : '#fff' : darkMode === true ? '#414853' : '#ededed', minWidth: '36%' }]}
                         onPress={() => handleInput(btn)}
                     >
                         <Text style={styles.textButton}>{btn}</Text>
                     </TouchableOpacity>
                     :
-                    <TouchableOpacity key={btn} style={[styles.button, { backgroundColor: typeof (btn) === 'number' ? darkMode ? '#303946' : '#fff' : darkMode === true ? '#414853' : '#ededed' }]}
+                    // Number button
+                    <TouchableOpacity key={btn} style={[styles.button, { backgroundColor: typeof (btn) === 'number' ? darkMode ? '#303946' : '#fff' : darkMode === true ? '#414853' : '#ededed',}] }
                         onPress={() => handleInput(btn)}
                     >
                         <Text style={styles.textButton}>{btn}</Text>
