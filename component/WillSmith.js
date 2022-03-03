@@ -21,7 +21,7 @@ export default function WillSmith() {
 const styles = StyleSheet.create({
     container:{
         width: 450,
-        height: 700,
+        height: 900,
         backgroundColor: '#333',
     },
     title:{

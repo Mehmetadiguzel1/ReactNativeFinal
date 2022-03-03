@@ -19,7 +19,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-      <Stack.Screen name="Home"options={{title: 'Home Page', headerStyle: {backgroundColor: '#333'},}} component={HomeScreen} />
+      <Stack.Screen name="Home"options={{title: 'Home Page', headerStyle: {backgroundColor: '#333'},headerShown: false}} component={HomeScreen} />
       <Stack.Screen name="Calculator"options={{title: 'Home Page', headerStyle: {backgroundColor: '#333'},}}  component={CalculatorScreen} />
       <Stack.Screen name="Images"options={{title: 'Home Page', headerStyle: {backgroundColor: '#333'},}} component={ImagesScreen} />
       <Stack.Screen name="Dwayne Johnson"options={{title: 'Movie Stars', headerStyle: {backgroundColor: '#333'},}} component={DwayneJohnson} />
