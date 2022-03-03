@@ -1,23 +1,35 @@
-import { StyleSheet, Text, View,SafeAreaView,ScrollView, Image } from 'react-native'
+import { StyleSheet, Text, View,SafeAreaView,ScrollView, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 
-export default function ImagesScreen() {
+export default function ImagesScreen({navigation}) {
   return (
     <SafeAreaView showHorizontalScrollIndicator={false} >
       <ScrollView horizontal={true}  style={{backgroundColor: '#333', height: 700,}} >
+        
         <View style={styles.container}>
-          <View style={styles.containerRow}>
-            <Image style={styles.imagesContainer} source={{uri: ('https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg')}} />
-            <Text style={styles.personInfo} > Dwayne Johnson </Text>
-          </View>
-          <View style={styles.containerRow}>
-            <Image style={styles.imagesContainer} source={{uri: ('https://media-cldnry.s-nbcnews.com/image/upload/t_focal-360x700,f_auto,q_auto:best/newscms/2016_01/921591/ss-160104-will-smith-tease.jpg')}} />
-            <Text style={styles.personInfo} > Will Smith </Text>
-          </View>
-          <View style={styles.containerRow}>
-            <Image style={styles.imagesContainer} source={{uri: ('https://images01.military.com/sites/default/files/styles/full/public/2021-10/1time%20adam%20driver%20marine%20corps%20veteran%201200.jpg')}} />
-            <Text style={styles.personInfo} > Adam Driver </Text>
-          </View>
+
+          <TouchableOpacity onPress={() => navigation.navigate('Dwayne Johnson')} style={{padding: 5,}} >
+            <View style={styles.containerRow}>
+              <Image style={styles.imagesContainer} source={{uri: ('https://www.dmarge.com/wp-content/uploads/2021/01/dwayne-the-rock-.jpg')}} />
+              <Text style={styles.personInfo} > Dwayne Johnson </Text>
+            </View>
+          </TouchableOpacity>
+          
+          <TouchableOpacity onPress={() => navigation.navigate('Will Smith')} style={{padding: 5,}} >
+            <View style={styles.containerRow}>
+              <Image style={styles.imagesContainer} source={{uri: ('https://media-cldnry.s-nbcnews.com/image/upload/t_focal-360x700,f_auto,q_auto:best/newscms/2016_01/921591/ss-160104-will-smith-tease.jpg')}} />
+              <Text style={styles.personInfo} > Will Smith </Text>
+            </View>
+          </TouchableOpacity>
+            
+          <TouchableOpacity onPress={() => navigation.navigate('Adam Driver')} style={{padding: 5,}} >
+            <View style={styles.containerRow}>
+              <Image style={styles.imagesContainer} source={{uri: ('https://images01.military.com/sites/default/files/styles/full/public/2021-10/1time%20adam%20driver%20marine%20corps%20veteran%201200.jpg')}} />
+              <Text style={styles.personInfo} > Adam Driver </Text>
+            </View>
+          </TouchableOpacity>
+          
+          
           
         </View>
       </ScrollView>

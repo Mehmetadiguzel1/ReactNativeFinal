@@ -1,7 +1,5 @@
 import { StyleSheet, Text, View, TouchableOpacity, ScrollView, SafeAreaView  } from 'react-native'
 import React from 'react'
-import { NavigationContainer } from '@react-navigation/native';
-import CalculatorScreen from './CalculatorScreen';
 
 
 export default function HomeScreen({navigation}) {
@@ -65,7 +63,7 @@ const styles = StyleSheet.create({
         fontSize: 17,
         fontWeight:"bold",
         marginTop:10,
-        color: '#0025A7', 
+        color: 'white', 
         backgroundColor: "#000",
         borderRadius: 5,
   },
@@ -76,7 +74,7 @@ const styles = StyleSheet.create({
         fontSize: 17,
         fontWeight:"bold",
         marginTop:10,
-        color: '#0025A7', 
+        color: 'white', 
         backgroundColor: "#000",
         borderRadius: 5,
   }
