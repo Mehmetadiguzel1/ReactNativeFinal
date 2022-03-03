@@ -8,6 +8,7 @@ export default function HomeScreen({navigation}) {
   return (
     
     <SafeAreaView style={styles.container} showHorizontalScrollIndicator={false} >
+      <Text style={{fontWeight:'bold', fontSize: 30, marginTop: 5}}>Final Project</Text>
       <ScrollView horizontal={true} style={{backgroundColor: '#303946'}}>
         <View style={{flexDirection: 'row', flex:1 , alignItems: 'center', justifyContent: 'center', marginLeft: 10,}}>
             
