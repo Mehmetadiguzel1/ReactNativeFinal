@@ -4,7 +4,7 @@ import React from 'react'
 export default function ImagesScreen({navigation}) {
   return (
     <SafeAreaView showHorizontalScrollIndicator={false} >
-      <ScrollView horizontal={true}  style={{backgroundColor: '#333', height: 850,}} >
+      <ScrollView horizontal={true}  style={{backgroundColor: '#333', height: 700,}} >
         
         <View style={styles.container}>
 
